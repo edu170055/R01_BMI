@@ -24,6 +24,7 @@ namespace R01_BMI
             double _weight = double.Parse(weight.Text);
 
             double _result = _weight / Math.Pow(_height / 100, 2);
+            _result = Math.Round(_result, 2, MidpointRounding.AwayFromZero);
             result.Text = "BMI: " + _result;
         }
     }
