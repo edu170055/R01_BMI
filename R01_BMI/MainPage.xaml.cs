@@ -17,5 +17,14 @@ namespace R01_BMI
         {
             InitializeComponent();
         }
+
+        public void Button_Clicked(object sender, EventArgs e)
+        {
+            double _height = double.Parse(height.Text);
+            double _weight = double.Parse(weight.Text);
+
+            double _result = _weight / Math.Pow(_height / 100, 2);
+            result.Text = "BMI: " + _result;
+        }
     }
 }
